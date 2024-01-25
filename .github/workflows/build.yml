@@ -1,0 +1,68 @@
+name: Build
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    release_draft:
+        permissions:
+            contents: write
+            pull-requests: write
+            checks: write
+        runs-on: ubuntu-latest
+        steps:
+            - uses: release-drafter/release-drafter@v5
+              id: release-drafter
+              with:
+                  config-name: 'release-drafter-config.yml'
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    release:
+        needs: release_draft
+        runs-on: ${{ matrix.os }}
+
+        permissions:
+            contents: write
+
+        strategy:
+            matrix:
+                os: [windows-latest]
+
+        steps:
+            - name: Check out Git repository
+              uses: actions/checkout@v3
+
+            - name: Set up Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+
+            - name: Set up Python
+              uses: actions/setup-python@v4
+              with:
+                  python-version: 3.x
+
+            - name: Install Dependencies
+              run: npm ci
+              shell: bash
+
+            - name: Restore .pfx file and set environment variables
+              env:
+                  PFX_BASE64: ${{ secrets.PFX_BASE64 }}
+                  CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
+              run: |
+                    echo $PFX_BASE64 | base64 --decode > ./gotiger.pfx
+                    export CSC_LINK=./gotiger.pfx
+                    export CSC_KEY_PASSWORD=$CSC_KEY_PASSWORD
+                    echo $CSC_LINK
+                    echo $CSC_KEY_PASSWORD
+              shell: bash
+
+            - name: Build
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: npm run dist
+              shell: bash
