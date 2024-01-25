@@ -207,7 +207,7 @@ downloadingFiles = "파일 다운로드 중.."
 errorDuringFileDownloadTitle = "파일 다운로드 중 오류 발생"
 preparingToLaunch = "실행 준비 중.."
 launchingGame = "게임 실행 중.."
-launchWrapperNotDownloaded = "주요 파일인 LaunchWrapper가 제대로 다운로드되지 않았습니다. 결과적으로, 게임을 실행할 수 없습니다.<br><br>이 문제를 해결하려면, 일시적으로 바이러스 백신 소프트웨어를 비활성화하고 게임을 다시 실행해 보세요.<br><br>시간이 있으시다면, <a href=\"https://github.com/go-tiger/Taecho-Village/issues\">문제 제출</a>을 해주시면, 당신이 사용하는 바이러스 백신 소프트웨어에 대한 정보와 함께 문제를 해결하려고 노력하겠습니다."
+launchWrapperNotDownloaded = "주요 파일인 LaunchWrapper가 제대로 다운로드되지 않았습니다. 결과적으로, 게임을 실행할 수 없습니다.<br><br>이 문제를 해결하려면, 일시적으로 바이러스 백신 소프트웨어를 비활성화하고 게임을 다시 실행해 보세요.<br><br>시간이 있으시다면, <a href=\"https://github.com/go-tiger/gitAction-codeSining-prac/issues\">문제 제출</a>을 해주시면, 당신이 사용하는 바이러스 백신 소프트웨어에 대한 정보와 함께 문제를 해결하려고 노력하겠습니다."
 doneEnjoyServer = "완료. 즐거운 시간 보내세요!"
 checkConsoleForDetails = "자세한 내용은 콘솔 (CTRL + Shift + i)을 참조하세요."
 

@@ -1740,7 +1740,7 @@ function populateAboutVersionInformation() {
  */
 function populateReleaseNotes() {
     $.ajax({
-        url: 'https://github.com/go-tiger/Taecho-Village/releases.atom',
+        url: 'https://github.com/go-tiger/gitAction-codeSining-prac/releases.atom',
         success: data => {
             const version = 'v' + remote.app.getVersion();
             const entries = $(data).find('entry');

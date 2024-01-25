@@ -57,7 +57,7 @@ if (!isDev) {
                 loggerAutoUpdater.info('New update available', info.version);
 
                 if (process.platform === 'darwin') {
-                    info.darwindownload = `https://github.com/go-tiger/Taecho-Village/releases/download/v${
+                    info.darwindownload = `https://github.com/go-tiger/gitAction-codeSining-prac/releases/download/v${
                         info.version
                     }/Helios-Launcher-setup-${info.version}${
                         process.arch === 'arm64' ? '-arm64' : '-x64'

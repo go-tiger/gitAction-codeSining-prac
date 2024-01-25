@@ -5,9 +5,9 @@
     "description": "TaechoVillage Minecraft Launcher",
     "author": "gotiger (https://github.com/go-tiger/)",
     "license": "UNLICENSED",
-    "homepage": "https://github.com/go-tiger/Taecho-Village",
+    "homepage": "https://github.com/go-tiger/gitAction-codeSining-prac",
     "bugs": {
-        "url": "https://github.com/go-tiger/Taecho-Village/issues"
+        "url": "https://github.com/go-tiger/gitAction-codeSining-prac/issues"
     },
     "private": true,
     "main": "index.js",
@@ -47,6 +47,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/go-tiger/Taecho-Village.git"
+        "url": "git+https://github.com/go-tiger/gitAction-codeSining-prac.git"
     }
 }

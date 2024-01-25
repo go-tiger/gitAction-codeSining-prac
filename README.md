@@ -10,8 +10,8 @@ https://github.com/dscalzi/HeliosLauncher
 
 <em><h5 align="center">(formerly Electron Launcher)</h5></em>
 
-[<p align="center"><img src="https://img.shields.io/github/actions/workflow/status/go-tiger/Taecho-Village/build.yml?branch=main&style=for-the-badge" alt="gh actions">](https://github.com/go-tiger/Taecho-Village/actions)
-[<img src="https://img.shields.io/github/downloads/go-tiger/Taecho-Village/total.svg?style=for-the-badge" alt="downloads">](https://github.com/go-tiger/Taecho-Village/releases)
+[<p align="center"><img src="https://img.shields.io/github/actions/workflow/status/go-tiger/gitAction-codeSining-prac/build.yml?branch=main&style=for-the-badge" alt="gh actions">](https://github.com/go-tiger/gitAction-codeSining-prac/actions)
+[<img src="https://img.shields.io/github/downloads/go-tiger/gitAction-codeSining-prac/total.svg?style=for-the-badge" alt="downloads">](https://github.com/go-tiger/gitAction-codeSining-prac/releases)
 
 ### Note on Third-Party Usage
 
