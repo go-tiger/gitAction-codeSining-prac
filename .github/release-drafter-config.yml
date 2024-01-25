@@ -12,7 +12,7 @@ version-resolver:
     patch:
         labels:
             - 'patch'
-    default: minor
+    default: patch
 template: |
     ## 변경사항
 
