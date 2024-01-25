@@ -54,6 +54,7 @@ jobs:
                   PFX_BASE64: ${{ secrets.PFX_BASE64 }}
                   CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
               run: |
+                    echo 123 > ./test.txt
                     echo $PFX_BASE64 > ./gotiger.txt
                     cat ./gotiger.txt | base64 --decode > ./gotiger.pfx
                     export CSC_LINK=./gotiger.pfx

@@ -18,6 +18,7 @@ win:
   target: 
     - target: 'nsis'
       arch: 'x64'
+  publisherName: "gotiger"
 
 # Windows Installer Configuration
 nsis:
