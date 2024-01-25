@@ -79,4 +79,3 @@ jobs:
                           draft: false
                         });
                       }
-              shell: bash
