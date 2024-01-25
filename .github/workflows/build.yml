@@ -19,6 +19,8 @@ jobs:
                   config-name: 'release-drafter-config.yml'
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        outputs:
+            release_id: ${{ steps.release-drafter.outputs.id }}
 
     release:
         needs: release_draft
@@ -66,16 +68,12 @@ jobs:
               with:
                   github-token: ${{ secrets.GITHUB_TOKEN }}
                   script: |
-                      const releases = await github.rest.repos.listReleases({
-                        owner: context.repo.owner,
-                        repo: context.repo.repo
-                      });
-                      const draftRelease = releases.data.find(release => release.tag_name === context.ref.replace('refs/tags/', '') && release.draft);
-                      if (draftRelease) {
+                      const release_id = ${{ needs.release_draft.outputs.release_id }};
+                      if (release_id) {
                         await github.rest.repos.updateRelease({
                           owner: context.repo.owner,
                           repo: context.repo.repo,
-                          release_id: draftRelease.id,
+                          release_id: release_id,
                           draft: false
                         });
                       }
